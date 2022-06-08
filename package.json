@@ -123,9 +123,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/medusajs/admin"
+    "url": "https://github.com/Mango-Mammoth/medusa-admin"
   },
   "bugs": {
-    "url": "https://github.com/medusajs/admin/issues"
+    "url": "https://github.com/Mango-Mammoth/medusa-adminissues"
   }
 }
