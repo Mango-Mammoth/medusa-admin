@@ -51,10 +51,10 @@ const Overview: React.FC<OverviewProps> = ({
   return (
     <>
       <div className="flex flex-col grow h-full">
-        <PageDescription
+        {/* <PageDescription
           title="Gift Cards"
           subtitle="Manage the Gift Cards of your Medusa store"
-        />
+        /> */}
         {!isLoading ? (
           <>
             <div className="mb-base">

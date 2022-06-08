@@ -65,7 +65,7 @@ const Textarea = React.forwardRef(
           <textarea
             className={clsx(
               "relative text-justify overflow-hidden focus:overflow-auto resize-none bg-inherit outline-none outline-0",
-              "w-full remove-number-spinner leading-base text-grey-90 font-normal caret-violet-60 placeholder-grey-40",
+              "w-full remove-number-spinner leading-base text-grey-90 font-normal caret-blue-60 placeholder-grey-40",
               "line-clamp-[var(--lines)] focus:line-clamp-none"
             )}
             style={

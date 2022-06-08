@@ -20,7 +20,7 @@ const getInitial = (
 }
 
 const CustomerAvatarItem: React.FC<CustomerAvatarItemProps> = ({
-  color = "bg-violet-60",
+  color = "bg-blue-60",
   customer,
 }: CustomerAvatarItemProps) => {
   const fullName =

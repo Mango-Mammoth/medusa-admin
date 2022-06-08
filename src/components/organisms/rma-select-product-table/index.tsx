@@ -146,7 +146,7 @@ const RMASelectProductTable: React.FC<RMASelectProductTableProps> = ({
                     <div
                       onClick={() => handleReturnToggle(item)}
                       className={`mr-4 w-5 h-5 flex justify-center text-grey-0 border-grey-30 border cursor-pointer rounded-base ${
-                        checked && "bg-violet-60"
+                        checked && "bg-blue-60"
                       }`}
                     >
                       <span className="self-center">

@@ -357,13 +357,13 @@ const ClaimMenu = ({ order, onCreate, onDismiss, notification }) => {
                 className={clsx(
                   "rounded-full w-5 h-5 flex mr-3 items-center justify-center",
                   {
-                    "border-violet-60 border-2": isReplace,
+                    "border-blue-60 border-2": isReplace,
                     "border-grey-40 border": !isReplace,
                   }
                 )}
               >
                 {isReplace && (
-                  <div className="w-3 h-3 bg-violet-60 rounded-full"></div>
+                  <div className="w-3 h-3 bg-blue-60 rounded-full"></div>
                 )}
               </div>
               Replace
@@ -378,13 +378,13 @@ const ClaimMenu = ({ order, onCreate, onDismiss, notification }) => {
                 className={clsx(
                   "rounded-full w-5 h-5 flex mr-3 items-center justify-center",
                   {
-                    "border-violet-60 border-2": !isReplace,
+                    "border-blue-60 border-2": !isReplace,
                     "border-grey-40 border": isReplace,
                   }
                 )}
               >
                 {!isReplace && (
-                  <div className="w-3 h-3 bg-violet-60 rounded-full"></div>
+                  <div className="w-3 h-3 bg-blue-60 rounded-full"></div>
                 )}
               </div>
               Refund
@@ -598,7 +598,7 @@ const ClaimMenu = ({ order, onCreate, onDismiss, notification }) => {
             >
               <div
                 className={`w-5 h-5 flex justify-center text-grey-0 border-grey-30 border rounded-base ${
-                  !noNotification && "bg-violet-60"
+                  !noNotification && "bg-blue-60"
                 }`}
               >
                 <span className="self-center">

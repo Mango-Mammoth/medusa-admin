@@ -1,4 +1,8 @@
+require("dotenv").config({
+  path: `.env`,
+})
 module.exports = {
+  pathPrefix: `/store-admin`,
   siteMetadata: {
     title: `Admin`,
     description: `The best ecommerce software.`,
@@ -24,8 +28,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `medusa-admin`,
-        short_name: `medusa`,
+        name: `mango-store-admin`,
+        short_name: `mango`,
         icon: `src/images/logo.svg`,
       },
     },

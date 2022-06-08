@@ -27,7 +27,7 @@ const Billing = ({ form, region }) => {
       >
         <div
           className={`w-5 h-5 flex justify-center text-grey-0 border-grey-30 border rounded-base ${
-            useShipping && "bg-violet-60"
+            useShipping && "bg-blue-60"
           }`}
         >
           <span className="self-center">

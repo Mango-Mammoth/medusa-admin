@@ -201,7 +201,7 @@ const NewShipping = ({
                   value="true"
                   checked={!adminOnly}
                   onChange={() => setAdminOnly(!adminOnly)}
-                  className="mr-small w-5 h-5 accent-violet-60 rounded-base"
+                  className="mr-small w-5 h-5 accent-blue-60 rounded-base"
                 />
                 Show on website
               </label>

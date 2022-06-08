@@ -91,7 +91,7 @@ export default {
     `,
   tagBoxShadow: `
       rgba(0,0,0,0) 0px 0px 0px 0px, 
-      rgb(190, 191, 208) 0px 0px 0px 2px, 
+      rgba(1, 84, 112, .2) 0px 0px 0px 2px, 
       rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
       rgba(60, 62, 87, 0.22) 0px 0px 0px 2px, 
       rgba(0,0,0,0) 0px 0px 0px 0px, 

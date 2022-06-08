@@ -22,7 +22,7 @@ const SidebarMenuItem: React.FC<SidebarMenuItemProps> = ({
   triggerHandler,
   subItems = [],
 }: SidebarMenuItemProps) => {
-  const activeStyles = "bg-grey-10 text-violet-50"
+  const activeStyles = "bg-grey-10 text-blue-50"
   return (
     <Collapsible
       transitionTime={150}

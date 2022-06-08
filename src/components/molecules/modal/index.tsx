@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import CrossIcon from "../../fundamentals/icons/cross-icon"
 import clsx from "clsx"
 import * as Dialog from "@radix-ui/react-dialog"
@@ -72,6 +72,19 @@ const Modal: ModalType = ({
   children,
 }) => {
   const portalRef = React.useRef(null)
+  useEffect(() => {
+    console.log("dialog")
+    window.parent.postMessage(
+      { type: "overlay", open: true },
+      window.parent.origin
+    )
+    return () => {
+      window.parent.postMessage(
+        { type: "overlay", open: false },
+        window.parent.origin
+      )
+    }
+  }, [open])
   return (
     <Dialog.Root open={open} onOpenChange={handleClose}>
       <Portal.UnstablePortal ref={portalRef}>

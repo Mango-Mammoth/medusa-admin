@@ -117,7 +117,7 @@ const EmojiPicker = ({ isOpen, onChange, onEmojiClick }) => {
         <Button
           variant="ghost"
           size="small"
-          className="focus:border-none focus:shadow-none text-grey-40 hover:text-violet-60 p-0 h-5 w-5"
+          className="focus:border-none focus:shadow-none text-grey-40 hover:text-blue-60 p-0 h-5 w-5"
         >
           <HappyIcon size={20} />
         </Button>

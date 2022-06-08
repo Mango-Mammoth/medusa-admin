@@ -1,6 +1,6 @@
-import { Router } from "@reach/router"
+import { Router, globalHistory } from "@reach/router"
 import { navigate } from "gatsby"
-import React from "react"
+import React, { useEffect } from "react"
 import { useHotkeys } from "react-hotkeys-hook"
 import PrivateRoute from "../components/private-route"
 import SEO from "../components/seo"
@@ -16,14 +16,39 @@ import Returns from "../domain/orders/returns"
 import Swaps from "../domain/orders/swaps"
 import Products from "../domain/products"
 import Settings from "../domain/settings"
-
+const adminHost = process.env.GATSBY_ADMIN_HOST
 const IndexPage = () => {
+  useEffect(() => {
+    return globalHistory.listen((event) => {
+      if (event.action === "PUSH" && window.parent.origin === adminHost) {
+        console.log({ historyChange: event })
+        window.parent.postMessage(event, adminHost)
+      }
+    })
+  }, [])
+  useEffect(() => {
+    window.addEventListener("message", handleMessage, false)
+    return () => {
+      window.removeEventListener("message", handleMessage, false)
+    }
+  }, [])
+
+  const handleMessage = (event) => {
+    if (event.origin !== adminHost) {
+      return
+    }
+    if (event.data.type === "navigate") {
+      console.log({ navigate: event })
+      navigate(event.data.path)
+    }
+  }
+
   useHotkeys("g + o", () => navigate("/a/orders"))
   useHotkeys("g + p", () => navigate("/a/products"))
   return (
     <Layout>
       <SEO title="Medusa" />
-      <Router basepath="a" className="h-full">
+      <Router basepath="/store-admin/a" className="h-full">
         <PrivateRoute path="oauth/:app_name" component={Oauth} />
         <PrivateRoute path="products/*" component={Products} />
         <PrivateRoute path="collections/*" component={Collections} />
